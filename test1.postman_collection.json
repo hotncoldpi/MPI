@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "c0785342-f624-4460-8cd8-c8a979c3b9bf",
+		"name": "test1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET ALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/MPI/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"MPI",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"enterpriseId\": \"\",\n    \"memberRecords\": [\n        {\n            \"patient\": null,\n            \"patiententerpriseId\": \"\",\n            \"source\": \"JHU\",\n            \"medicalRecordNumber\": \"123b\",\n            \"firstName\": \"Bob\",\n            \"lastName\": \"Rossa\",\n            \"socialSecurityNumber\": \"123-12-1236\",\n            \"address\": {\n                \"addressId\": 0,\n                \"addressLine1\": \"\",\n                \"addressLine2\": \"\",\n                \"city\": \"\",\n                \"state\": \"\",\n                \"zipCode\": \"90036\"\n            },\n            \"addressId\": 0\n        },\n        {\n            \"patient\": null,\n            \"patiententerpriseId\": \"\",\n            \"source\": \"JHU\",\n            \"medicalRecordNumber\": \"123a\",\n            \"firstName\": \"Bob\",\n            \"lastName\": \"Rossa\",\n            \"socialSecurityNumber\": \"123-12-1236\",\n            \"address\": {\n                \"addressId\": 0,\n                \"addressLine1\": \"1313 mockingbird lane\",\n                \"addressLine2\": \"\",\n                \"city\": \"\",\n                \"state\": \"\",\n                \"zipCode\": \"90036\"\n            },\n            \"addressId\": 0\n        }\n        \n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/MPI/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"MPI",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET ONE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/MPI/JHU/123a",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"MPI",
+						"JHU",
+						"123a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"enterpriseId\": \"\",\n    \"memberRecords\": [\n        {\n            \"patient\": null,\n            \"patiententerpriseId\": \"\",\n            \"source\": \"JHU\",\n            \"medicalRecordNumber\": \"123g\",\n            \"firstName\": \"Bob\",\n            \"lastName\": \"Rossa\",\n            \"socialSecurityNumber\": \"123-12-1236\",\n            \"address\": {\n                \"addressId\": 0,\n                \"addressLine1\": \"\",\n                \"addressLine2\": \"\",\n                \"city\": \"\",\n                \"state\": \"\",\n                \"zipCode\": \"90036\"\n            },\n            \"addressId\": 0\n        },\n        {\n            \"patient\": null,\n            \"patiententerpriseId\": \"\",\n            \"source\": \"JHU\",\n            \"medicalRecordNumber\": \"123h\",\n            \"firstName\": \"Bob\",\n            \"lastName\": \"Rossa\",\n            \"socialSecurityNumber\": \"123-12-1236\",\n            \"address\": {\n                \"addressId\": 0,\n                \"addressLine1\": \"1313 mockingbird lane\",\n                \"addressLine2\": \"\",\n                \"city\": \"\",\n                \"state\": \"\",\n                \"zipCode\": \"90036\"\n            },\n            \"addressId\": 0\n        }\n        \n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/MPI/xyz",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"MPI",
+						"xyz"
+					]
+				},
+				"description": "POST"
+			},
+			"response": []
+		},
+		{
+			"name": "GET ONE AGAIN",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/MPI/JHU/123g",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"MPI",
+						"JHU",
+						"123g"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/MPI/xyz",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"MPI",
+						"xyz"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
